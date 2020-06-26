@@ -36,7 +36,7 @@
         <v-row class ="default">
             <v-col class = "imga" cols="5" sm="4">
                 <div class="container" style="clear: right">
-                    <a href="/">
+                    <a href="/dummy">
                 <v-img class="imag" position="25% 75%" src = @/assets/speedplanner.png aspect-ratio = "6.5">
                 </v-img>
                     </a>
@@ -48,8 +48,6 @@
             </v-col>
         </v-row>
     </v-card>
-
-
 </template>
 
 <script>
