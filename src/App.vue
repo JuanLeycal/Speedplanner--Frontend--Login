@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!--router-view/>-->
+    <CourseSelection></CourseSelection>
   </div>
 </template>
 <script>
 
 
 
+import CourseSelection from "@/components/CourseSelection";
 export default {
   name: 'App',
 
   components: {
-
+    CourseSelection
 
   },
 

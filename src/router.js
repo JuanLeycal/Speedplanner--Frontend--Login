@@ -9,6 +9,6 @@ export default new Router({
         { path: "/", alias: "/login", name: "login", component: () => import("./components/Login") },
         { path: "/findPassword", alias: "/findPassword", name: "findPassword", component: () => import("./components/FindPassword") },
         { path: "/passwordFound", alias: "/passwordFound", name: "foundPassword", component: () => import("./components/PasswordFound") },
-        { path: "/dummy", alias: "/dummy", name: "dummy", component: () => import("./components/dummy") },
+        { path: "/dummy", alias: "/dummy", name: "dummy", component: () => import("./components/CourseSelection") },
     ]
 });
