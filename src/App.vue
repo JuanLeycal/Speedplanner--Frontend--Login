@@ -1,25 +1,21 @@
 <template>
   <div id="app">
-    <!--router-view/>-->
-    <CourseSelection></CourseSelection>
+    <router-view/>
   </div>
 </template>
 <script>
 
 
 
-import CourseSelection from "@/components/CourseSelection";
-export default {
-  name: 'App',
+  export default {
+    name: 'App',
 
-  components: {
-    CourseSelection
+    components: {
 
-  },
+    },
 
-  data: () => ({
-    //
-  }),
-};
+    data: () => ({
+      //
+    }),
+  };
 </script>
-
