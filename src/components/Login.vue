@@ -31,15 +31,12 @@
         </v-card-text >
 
         <v-col class="text-right">
-            <v-btn outlined color="white" rounded class="Accept">Aceptar</v-btn>
         </v-col>
         <v-row class ="default">
             <v-col class = "imga" cols="5" sm="4">
                 <div class="container" style="clear: right">
-                    <a href="/dummy">
                 <v-img class="imag" position="25% 75%" src = @/assets/speedplanner.png aspect-ratio = "6.5">
                 </v-img>
-                    </a>
                 </div>
             </v-col>
             <v-col class="space2"  cols="12" sm="12"></v-col>
