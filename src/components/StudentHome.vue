@@ -19,11 +19,14 @@
                 <v-navigation-drawer class="deep-purple accent-4" dark permanent>
                     <v-list class="list">
                         <v-item>
-                            <v-btn class ="button-carrera" href="/CursoDeCarrera" > > Cursos de Carrera</v-btn>
+                            <router-link to="/CursoDeCarrera" style="text-decoration:none">
+                                <v-btn class ="button-carrera"> > Cursos de Carrera</v-btn>
+                            </router-link>
                         </v-item>
-                        <br>
                         <v-item>
-                            <v-btn class ="button-electivo" href="/CursoElectivo" > > Cursos Electivo</v-btn>
+                            <router-link to="/CursoElectivo" style="text-decoration:none">
+                                <v-btn class ="button-electivo"> > Cursos Electivos</v-btn>
+                            </router-link>
                         </v-item>
                     </v-list>
 
@@ -142,6 +145,7 @@
         font-size:13px;
         width:100%;
         height:100%;
+        color:white;
     }
 
     .button-electivo{
@@ -150,6 +154,7 @@
         font-size:13px;
         width:100%;
         height:100%;
+        color:white;
     }
     .a{
         font-family: 'Khula', sans-serif;
