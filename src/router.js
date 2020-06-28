@@ -10,5 +10,8 @@ export default new Router({
         { path: "/findPassword", alias: "/findPassword", name: "findPassword", component: () => import("./components/FindPassword") },
         { path: "/passwordFound", alias: "/passwordFound", name: "foundPassword", component: () => import("./components/PasswordFound") },
         { path: "/dummy", alias: "/dummy", name: "dummy", component: () => import("./components/dummy") },
+        { path: "/adminLogin", alias: "/adminLogin", name: "adminLogin", component: () => import("./components/AdminLogin") },
+        { path: "/noSectionRequestsFound", alias: "/noSectionRequestsFound", component: () => import("./components/NoSectionRequestsFound") },
+        { path: "/sectionRequests", alias: "/sectionRequests", component: () => import("./components/SectionRequests") }
     ]
 });
