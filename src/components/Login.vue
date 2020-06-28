@@ -31,7 +31,6 @@
         </v-card-text >
 
         <v-col class="text-right">
-            <v-btn href="/StudentHome" outlined color="white" rounded class="Accept">Aceptar</v-btn>
         </v-col>
         <v-row class ="default">
             <v-col class = "imga" cols="5" sm="4">
