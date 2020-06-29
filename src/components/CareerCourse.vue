@@ -2,14 +2,14 @@
     <v-card class="a">
         <v-row>
             <v-col class="space1" cols="12" sm="12">
-                <h1>Cursos Electivos</h1>
+                <h1>Cursos de Carrera</h1>
             </v-col>
             <v-col class="space2" cols="12" sm="12"></v-col>
             <v-col class="space3" cols="12" sm="12"></v-col>
         </v-row>
 
-        <v-card-text class ="horarios-disponibles">
-            <h1>Secciones Disponible</h1>
+        <v-card-text class ="schedules-available">
+            <h1>Secciones Disponibles</h1>
             <v-btn class ="button-filter" >Filtros</v-btn>
             <div>
                 <v-data-table
@@ -28,10 +28,10 @@
                 </v-data-table>
             </div>
             <router-link to="/StudentHome" style="text-decoration:none">
-                <v-btn class ="aceptar">Aceptar</v-btn>
+                <v-btn class ="accept">Aceptar</v-btn>
             </router-link>
             <router-link to="/StudentHome" style="text-decoration:none">
-                <v-btn class ="cancelar">Cancelar</v-btn>
+                <v-btn class ="cancel">Cancelar</v-btn>
             </router-link>
 
         </v-card-text>
@@ -51,7 +51,7 @@
 
 <script>
     export default {
-        name: "CursoElectivo",
+        name: "CareerCourse",
         data () {
             return {
                 singleSelect: false,
@@ -125,7 +125,7 @@
         height:2%;
     }
 
-    .horarios-disponibles{
+    .schedules-available{
         background-color:  #23313F ;
         height: 500px;
     }
@@ -137,7 +137,7 @@
         color: #FFFFFF;
         text-align: right;
     }
-    .horarios-disponibles h1{
+    .schedules-available h1{
         color: white;
         font-size: 40px;
     }
@@ -168,9 +168,9 @@
         top: -45px;
     }
 
-    .aceptar{
+    .accept{
         float: right;
-        background-color: #4377F2!important;
+        background-color: #4377f2 !important;
         font-size:13px;
         width:15%;
         height:15%;
@@ -180,7 +180,7 @@
         top: 90px;
     }
 
-    .cancelar{
+    .cancel{
         float: right;
         background-color: #B8504F !important;
         font-size:13px;
@@ -192,4 +192,5 @@
         top: 90px;
         right: 5%;
     }
+
 </style>
