@@ -20,6 +20,7 @@ export default new Router({
 
         { path: "/studentHome", alias: "/studentHome", name: "studentHome", component: () => import("./components/StudentHome")},
         { path: "/cursoDeCarrera", alias: "/cursoDeCarrera", name: "cursoDeCarrera", component: () => import("./components/CursoDeCarrera")},
-        { path: "/cursoElectivo", alias: "/cursoElectivo", name: "cursoElectivo", component: () => import("./components/CursoElectivo")}
+        { path: "/cursoElectivo", alias: "/cursoElectivo", name: "cursoElectivo", component: () => import("./components/CursoElectivo")},
+        { path: "/showSchedule", alias: "/showSchedule", name: "showSchedule", component: () => import("./components/ShowSchedule") },
     ]
 });
