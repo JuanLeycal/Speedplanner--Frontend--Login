@@ -16,8 +16,12 @@
                 <v-card-text class ="text" cols="12" sm="12">Se detectó una cuenta. Se envió un correo con la contraseña</v-card-text>
 
                     <div class="text-center">
-                    <v-btn  outlined color="white" rounded class="Log">No recibi un correo</v-btn>
-                    <v-btn href="/" outlined color="white" rounded class="Accept">Volver al Login</v-btn>
+                        <router-link to="/" style="text-decoration:none">
+                            <v-btn  outlined color="white" rounded class="Log">No recibi un correo</v-btn>
+                        </router-link>
+                        <router-link to="/" style="text-decoration:none">
+                            <v-btn outlined color="white" rounded class="Accept">Volver al Login</v-btn>
+                        </router-link>
                     </div>
 
             </v-form>

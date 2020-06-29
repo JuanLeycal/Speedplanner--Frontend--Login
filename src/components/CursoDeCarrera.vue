@@ -27,8 +27,12 @@
                     </template>
                 </v-data-table>
             </div>
-            <v-btn class ="aceptar" href="/StudentHome">Aceptar</v-btn>
-            <v-btn class ="cancelar">Cancelar</v-btn>
+            <router-link to="/StudentHome" style="text-decoration:none">
+                <v-btn class ="aceptar">Aceptar</v-btn>
+            </router-link>
+            <router-link to="/StudentHome" style="text-decoration:none">
+                <v-btn class ="cancelar">Cancelar</v-btn>
+            </router-link>
 
         </v-card-text>
 

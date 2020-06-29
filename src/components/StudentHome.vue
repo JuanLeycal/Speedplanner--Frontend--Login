@@ -51,9 +51,10 @@
 </template>
 
 <script>
+
     export default {
-        data () {
-        },
+        name: "StudentHome",
+
     }
     //Calendar de Vuetify
     /*<v-row>
