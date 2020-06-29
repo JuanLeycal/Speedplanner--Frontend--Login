@@ -21,7 +21,9 @@
                           required>
             </v-text-field>
             <v-col class="text-center">
-                <v-btn href="/passwordFound" outlined color="white" rounded class="Accept">Recuperar</v-btn>
+                <router-link to="/PasswordFound" style="text-decoration:none" >
+                    <v-btn outlined color="white" rounded class="Accept">Recuperar</v-btn>
+                </router-link>
             </v-col>
         </v-form>
         </v-card-text >

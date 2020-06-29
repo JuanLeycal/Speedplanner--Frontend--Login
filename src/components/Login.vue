@@ -27,11 +27,15 @@
 
                 <router-link to="/findPassword" class = "red--text">Recordar Contraseña</router-link>
 
+                <router-link to="/StudentHome" style="text-decoration:none">
+                    <v-btn class="Accept" outlined color="white" rounded >Aceptar</v-btn>
+                </router-link>
             </v-form>
         </v-card-text >
 
         <v-col class="text-right">
         </v-col>
+
         <v-row class ="default">
             <v-col class = "imga" cols="5" sm="4">
                 <div class="container" style="clear: right">
@@ -48,6 +52,7 @@
 </template>
 
 <script>
+    import router from "../router";
     export default {
         name: "Login",
         data: () => ({
@@ -55,8 +60,15 @@
                 password: null,
                 isValid: true
             }
-        )
+        ),
+        methods:{
+            aceptar(){
+                router.push({path: `/StudentHome`})
+                location.reload();
+            }
+        }
     }
+
 </script>
 
 <style scoped>
@@ -111,7 +123,6 @@
         background-color: #A43E38;
         border-width: thick;
         margin-left: 1315px;
-
     }
     .space1{
         background-color: #3055AB;
@@ -133,7 +144,7 @@
         color: #FFFFFF;
         text-align: right;
     }
-    .container{
 
+    .container{
     }
 </style>
