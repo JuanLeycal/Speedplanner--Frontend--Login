@@ -19,24 +19,33 @@
                 <v-navigation-drawer class="deep-purple accent-4" dark permanent>
                     <v-list class="list">
                         <v-item>
-                            <router-link to="/CursoDeCarrera" style="text-decoration:none">
-                                <v-btn class ="button-carrera"> > Cursos de Carrera</v-btn>
+                            <router-link to="/CareerCourse" style="text-decoration:none">
+                                <v-btn class ="button-career"> > Cursos de Carrera</v-btn>
                             </router-link>
                         </v-item>
                         <v-item>
-                            <router-link to="/CursoElectivo" style="text-decoration:none">
-                                <v-btn class ="button-electivo"> > Cursos Electivos</v-btn>
+                            <router-link to="/OptionalCourse" style="text-decoration:none">
+                                <v-btn class ="button-optional"> > Cursos Electivos</v-btn>
                             </router-link>
                         </v-item>
                     </v-list>
 
                     <template v-slot:append>
                         <div class="pa-2">
-                            <v-btn class ="button" >Guardar</v-btn>
-                            <v-btn class ="button">Grabar</v-btn>
+                            <router-link to="/DialogSaveSchedule" style="text-decoration:none">
+                                <v-btn class ="button" >Guardar</v-btn>
+                            </router-link>
+                            <router-link to="/QuestionSaveSchedule" style="text-decoration:none">
+                                <v-btn class ="button">Grabar</v-btn>
+                            </router-link>
                         </div>
                     </template>
 
+                    <v-layout column align-center>
+                        <v-flex class="mt-4 mb-3">
+                            <pop></pop>
+                        </v-flex>
+                    </v-layout>
                 </v-navigation-drawer>
             </v-card>
         </v-card-text>
@@ -51,7 +60,6 @@
 </template>
 
 <script>
-
     export default {
         name: "StudentHome",
 
@@ -140,7 +148,7 @@
         border-radius: 6px;
         border: 2px solid white;
     }
-    .button-carrera{
+    .button-career{
         background-color: #48617C !important;
         display: block;
         font-size:13px;
@@ -149,7 +157,7 @@
         color:white;
     }
 
-    .button-electivo{
+    .button-optional{
         background-color: #48617C !important;
         display: block;
         font-size:13px;
