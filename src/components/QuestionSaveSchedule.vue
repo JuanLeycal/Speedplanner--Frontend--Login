@@ -9,7 +9,7 @@
         <v-card-text class="dialog">
             <v-col>
                 <h1>¿Seguro que desea grabar su horario?</h1>
-                <h2> No podra volver a edtiar su horario </h2>
+                <h2> No podra volver a editar su horario </h2>
                 <router-link to ="/StudentHome" style="text-decoration:none">
                     <v-btn class ="cancel">Cancelar</v-btn>
                 </router-link>

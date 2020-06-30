@@ -22,7 +22,9 @@
             <v-img class="imag" src = @/assets/speedplanner.png></v-img>
         </v-col>
         <v-col  class="btn-area" cols="12" sm="7">
-            <v-btn class="btn1" outlined color="white" rounded >Regresar</v-btn>
+            <router-link to="/StudentHome" style="text-decoration:  none">
+                <v-btn class="btn1" outlined color="white" rounded >Regresar</v-btn>
+            </router-link>
         </v-col>
         </v-row>
         <v-col class="space2"  cols="12" sm="12"></v-col>

@@ -15,11 +15,15 @@
         <v-row>
             <v-col class="btn-area" cols="12" sm="12">
                 <div class="button1">
-                    <v-btn outlined color="white" rounded x-large top class="btn">Consulta de estadísticas</v-btn>
+                    <router-link to ="/Statistic" style="text-decoration:none">
+                        <v-btn outlined color="white" rounded x-large top class="btn">Consulta de estadísticas</v-btn>
+                    </router-link>
                 </div>
 
                 <div class="button2">
-                    <v-btn outlined color="white" rounded x-large bottom width="280" class="btn">Apertura de cursos</v-btn>
+                    <router-link to ="/SectionRequests" style="text-decoration:none">
+                        <v-btn outlined color="white" rounded x-large bottom width="280" class="btn">Apertura de cursos</v-btn>
+                    </router-link>
                 </div>
             </v-col>
         </v-row>

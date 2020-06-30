@@ -18,6 +18,9 @@ export default new Router({
         { path: "/showSchedule", alias: "/showSchedule", name: "showSchedule", component: () => import("./components/ShowSchedule") },
         { path: "/dialogSaveSchedule", alias: "/dialogSaveSchedule", name: "dialogSaveSchedule", component: () => import("./components/DialogSaveSchedule") },
         { path: "/questionSaveSchedule", alias: "/questionSaveSchedule", name: "questionSaveSchedule", component: () => import("./components/QuestionSaveSchedule") },
-        { path: "/successfullyRecordSchedule", alias: "/successfullyRecordSchedule", name: "successfullyRecordSchedule", component: () => import("./components/SuccessfullyRecordSchedule") }
+        { path: "/successfullyRecordSchedule", alias: "/successfullyRecordSchedule", name: "successfullyRecordSchedule", component: () => import("./components/SuccessfullyRecordSchedule") },
+        { path: "/statistic", alias: "/statistic", name: "statistic", component: () => import("./components/Statistics") },
+        { path: "/filtersCareerCourse", alias: "/filtersCareerCourse", name: "filtersCareerCourse", component: () => import("./components/FiltersCareerCourse") },
+        { path: "/filterOptionalCourse", alias: "/filterOptionalCourse", name: "filterOptionalCourse", component: () => import("./components/FilterOptionalCourse") }
     ]
 });
