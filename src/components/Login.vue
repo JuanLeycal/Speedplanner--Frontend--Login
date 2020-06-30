@@ -28,12 +28,19 @@
                 <router-link to="/findPassword" class = "red--text">Recordar Contraseña</router-link>
 
 
-                    <a @click="userValidate()" >Aceptar</a>
+
 
             </v-form>
         </v-card-text >
 
+
+
         <v-col class="text-right">
+            <a @click="userValidate()" class="default">
+                <v-btn class="Accept">
+                    Aceptar
+                </v-btn>
+            </a>
         </v-col>
 
         <v-row class ="default">
@@ -45,7 +52,7 @@
             </v-col>
             <v-col class="space2"  cols="12" sm="12"></v-col>
             <v-col class="space3"  cols="12" sm="12">
-                <v-card-text class ="Domain">Adaptimize, 2019</v-card-text>
+                <v-card-text class ="Domain">Adaptimize, 2020</v-card-text>
             </v-col>
         </v-row>
     </v-card>
@@ -159,7 +166,7 @@
         border-radius: 20px;
         border-style: solid;
         border-color: #FFFFFF;
-        background-color: #A43E38;
+        background-color: #A43E38 !important;
         border-width: thick;
         margin-left: 1315px;
     }

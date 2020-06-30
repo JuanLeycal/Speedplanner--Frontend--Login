@@ -23,7 +23,9 @@
                     </thead>
                     <tbody>
                     <tr v-for="todo in todos" :key="todo.id">
+                        <router-link to="/viewSection" >
                         <td>{{todo.code}}</td>
+                        </router-link>
                         <td>{{todo.name}}</td>
                         <td>{{todo.credits}}</td>
                         <td>{{todo.semester}}</td>

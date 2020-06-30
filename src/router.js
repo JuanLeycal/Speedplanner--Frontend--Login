@@ -21,6 +21,7 @@ export default new Router({
         { path: "/successfullyRecordSchedule", alias: "/successfullyRecordSchedule", name: "successfullyRecordSchedule", component: () => import("./components/SuccessfullyRecordSchedule") },
         { path: "/statistic", alias: "/statistic", name: "statistic", component: () => import("./components/Statistics") },
         { path: "/filtersCareerCourse", alias: "/filtersCareerCourse", name: "filtersCareerCourse", component: () => import("./components/FiltersCareerCourse") },
+        { path: "/viewSection", alias: "/vSection", name: "viewSection", component: () => import("./components/View Sections") },
         { path: "/filterOptionalCourse", alias: "/filterOptionalCourse", name: "filterOptionalCourse", component: () => import("./components/FilterOptionalCourse") }
     ]
 });
