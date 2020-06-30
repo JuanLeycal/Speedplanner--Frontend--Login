@@ -27,9 +27,9 @@
 
                 <router-link to="/findPassword" class = "red--text">Recordar Contraseña</router-link>
 
-                <router-link to="/StudentHome" style="text-decoration:none">
-                    <v-btn class="Accept" outlined color="white" rounded >Aceptar</v-btn>
-                </router-link>
+
+                    <a @click="userValidate()" >Aceptar</a>
+
             </v-form>
         </v-card-text >
 
@@ -57,6 +57,7 @@
     export default {
         name: "Login",
         data: () => ({
+                userId: null,
                 email: null,
                 password: null,
                 isValid: true,
@@ -82,9 +83,10 @@
                                 console.log("User Found");
                                 this.userId = response.data[i].id;
                                 console.log("User id: ", this.userId);
-                                this.$store.commit('saveId', this.userId);
+                                this.$store.commit('saveId', response.data[i].id);
                                 console.log("User id: ", this.$store.state.userId);
                                 this.auth = true;
+                                router.push({path: `/studentHome`});
                                 break;
                             }
                         }

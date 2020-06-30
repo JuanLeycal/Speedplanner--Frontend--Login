@@ -12,8 +12,8 @@ export const store = new Vuex.Store({
     },
 
     mutations: {
-        saveId(state, id){
-            this.state.id = id;
+        saveId(state, userId){
+            this.state.id = userId;
         },
 
         saveUsername(state, username){
@@ -28,4 +28,4 @@ export const store = new Vuex.Store({
             this.state.password = password;
         }
     }
-})
+});

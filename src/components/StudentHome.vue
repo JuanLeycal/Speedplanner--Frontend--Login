@@ -43,7 +43,7 @@
 
                     <v-layout column align-center>
                         <v-flex class="mt-4 mb-3">
-                            <pop></pop>
+
                         </v-flex>
                     </v-layout>
                 </v-navigation-drawer>
