@@ -15,12 +15,14 @@
         <v-col class="btn-area" cols="12" sm="12">
             <h1>Se ha grabado correctamente su horario</h1>
             <div>
-                <v-btn class="btn-2">Mostrar Horario</v-btn>
+                <router-link to="ShowSchedule" style="text-decoration:none">
+                    <v-btn class="btn-2">Mostrar Horario</v-btn>
+                </router-link>
             </div>
 
             <div>
                 <router-link to="/" style="text-decoration:none">
-                <v-btn class="btn-1">Cerrar Sesion</v-btn>
+                    <v-btn class="btn-1">Cerrar Sesion</v-btn>
                 </router-link>
             </div>
         </v-col>

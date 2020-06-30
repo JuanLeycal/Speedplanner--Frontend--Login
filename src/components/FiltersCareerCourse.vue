@@ -13,9 +13,8 @@
       </v-row>
       <v-row class="space3">
          <v-col class="space2">
-            <h2 class="po">Docente :</h2>
+            <h2 class="po">Docente: </h2>
          </v-col>
-
          <v-col class="d-flex" cols="12" sm="6">
             <v-select
                     :items="List"
@@ -34,8 +33,12 @@
       </v-row >
       <v-row class="space4" justify="right">
          <v-col  class="btn-area" cols="12" sm="6" >
-            <v-btn outlined color="white" rounded x-large bottom width="280" class="btn">Cancelar</v-btn>
-            <v-btn outlined color="white" rounded x-large bottom width="280" class="btn1">Aceptar</v-btn>
+            <router-link to="/CareerCourse" style="text-decoration:none">
+               <v-btn outlined color="white" rounded x-large bottom width="280" class="btn">Cancelar</v-btn>
+            </router-link>
+            <router-link to="/CareerCourse" style="text-decoration:none">
+               <v-btn outlined color="white" rounded x-large bottom width="280" class="btn1">Aceptar</v-btn>
+            </router-link>
          </v-col>
       </v-row>
       <v-row>
@@ -55,11 +58,14 @@
             <div class="buttonText">©Adaptimize, 2020</div>
          </v-col>
       </v-row>
+
+
    </v-card>
 </template>
 
 <script>
    export default {
+      name: "FilterCareerCourse",
       data() {
          return {
             List: ['Juan Carlos', 'Rodrigo Ramirez', 'Marcelo Martinez', 'Rafael '],
@@ -71,6 +77,7 @@
 
 <style scoped>
    .btn{
+      float:right;
       font-size: 18px;
       color: white !important;
       font-family: 'Khula', sans-serif;
@@ -80,8 +87,10 @@
       border-color: #FFFFFF;
       background-color: #A43E38;
       margin-right: 10px;
+      left: 600px;
    }
    .btn1{
+      float: right;
       font-size: 18px;
       color: white !important;
       font-family: 'Khula', sans-serif;
@@ -90,6 +99,7 @@
       border-style: solid;
       border-color: #FFFFFF;
       background-color: #4377F2;
+      left: 1200px;
    }
    .space4{
       background-color:#2E3D4E;
@@ -117,6 +127,7 @@
    }
    .space3{
       height: 75px;
+      background-color: #2E3D4E;
    }
    .a{
       font-family: 'Khula', sans-serif;
@@ -127,18 +138,13 @@
       height: 125px;
       color: White;
       font-size: 20px;
-      text-align: left;
-      left: 50px;
    }
 
    .space2 {
       background-color:#2E3D4E;
       height: 75px;
       width: 100px;
-      color: White;
-      font-size: 15px;
       text-align: left;
-      left: 50px;
    }
    .stripe7{
       background-color: #9F3833;
@@ -175,5 +181,16 @@
       font-family: "Khula" , sans-serif;
       font-weight: lighter;
       text-align: right;
+   }
+
+   .space1 h1{
+      text-align: center;
+      font-size: 60px;
+   }
+
+   .space2 h2{
+      padding-top: 10px;
+      padding-left: 20px;
+      font-size: 30px;
    }
 </style>

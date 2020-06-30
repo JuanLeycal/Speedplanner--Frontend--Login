@@ -27,9 +27,9 @@
 
                 <router-link to="/findPassword" class = "red--text">Recordar Contraseña</router-link>
 
-                <router-link to="/StudentHome" style="text-decoration:none">
-                    <v-btn class="Accept" outlined color="white" rounded >Aceptar</v-btn>
-                </router-link>
+
+                    <a @click="userValidate()" >Aceptar</a>
+
             </v-form>
         </v-card-text >
 
@@ -53,21 +53,60 @@
 
 <script>
     import router from "../router";
+    import axios from "axios";
     export default {
         name: "Login",
         data: () => ({
+                userId: null,
                 email: null,
                 password: null,
-                isValid: true
+                isValid: true,
+                users: [],
+                profiles: []
             }
         ),
         methods:{
             aceptar(){
                 router.push({path: `/StudentHome`})
                 location.reload();
-            }
-        }
+            },
+            userValidate : function (){
+                axios.get('https://speedplanner.azurewebsites.net/api/User').then(
+                    response => {
+                        this.userId = 0;
+                        this.users = response.data;
+                        for(let i = 0; i < response.data.length; i++) {
+                            if (response.data[i].username === this.email &&
+                                response.data[i].password === this.password ||
+                                response.data[i].email === this.email &&
+                                response.data[i].password === this.password) {
+                                console.log("User Found");
+                                this.userId = response.data[i].id;
+                                console.log("User id: ", this.userId);
+                                this.$store.commit('saveId', response.data[i].id);
+                                console.log("User id: ", this.$store.state.userId);
+                                this.auth = true;
+                                router.push({path: `/studentHome`});
+                                break;
+                            }
+                        }
+                        if (!this.auth) {
+                            alert("Wrong username/password");
+                        }
+                    }
+                );
+             },
+        },
     }
+
+
+
+
+
+
+
+
+
 
 </script>
 
