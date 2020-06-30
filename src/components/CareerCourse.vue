@@ -10,7 +10,9 @@
 
         <v-card-text class ="schedules-available">
             <h1>Secciones Disponibles</h1>
-            <v-btn class ="button-filter" >Filtros</v-btn>
+            <router-link to="/FiltersCareerCourse" >
+                <v-btn class ="button-filter" >Filtros</v-btn>
+            </router-link>
             <div>
                 <v-data-table
                         v-model="selected"
