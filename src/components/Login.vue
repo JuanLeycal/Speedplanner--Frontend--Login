@@ -53,21 +53,58 @@
 
 <script>
     import router from "../router";
+    import axios from "axios";
     export default {
         name: "Login",
         data: () => ({
                 email: null,
                 password: null,
-                isValid: true
+                isValid: true,
+                users: [],
+                profiles: []
             }
         ),
         methods:{
             aceptar(){
                 router.push({path: `/StudentHome`})
                 location.reload();
-            }
-        }
+            },
+            userValidate : function (){
+                axios.get('https://speedplanner.azurewebsites.net/api/User').then(
+                    response => {
+                        this.userId = 0;
+                        this.users = response.data;
+                        for(let i = 0; i < response.data.length; i++) {
+                            if (response.data[i].username === this.email &&
+                                response.data[i].password === this.password ||
+                                response.data[i].email === this.email &&
+                                response.data[i].password === this.password) {
+                                console.log("User Found");
+                                this.userId = response.data[i].id;
+                                console.log("User id: ", this.userId);
+                                this.$store.commit('saveId', this.userId);
+                                console.log("User id: ", this.$store.state.userId);
+                                this.auth = true;
+                                break;
+                            }
+                        }
+                        if (!this.auth) {
+                            alert("Wrong username/password");
+                        }
+                    }
+                );
+             },
+        },
     }
+
+
+
+
+
+
+
+
+
 
 </script>
 
