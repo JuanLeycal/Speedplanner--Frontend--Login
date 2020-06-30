@@ -2,48 +2,35 @@
     <v-card class="a">
         <v-row>
             <v-col class="space1" cols="12" sm="12">
-                <h1>Cursos de Carrera</h1>
+                <h1>Matemática Básica</h1>
             </v-col>
             <v-col class="space2" cols="12" sm="12"></v-col>
             <v-col class="space3" cols="12" sm="12"></v-col>
         </v-row>
 
         <v-card-text class ="schedules-available">
-            <h1>Cursos Disponibles</h1>
+            <h1>Secciones Disponibles</h1>
             <v-btn class ="button-filter" >Filtros</v-btn>
             <div>
-                <table>
+                <table id="courses-list">
                     <thead>
                     <tr>
-                        <th>Code</th>
-                        <th>Name</th>
-                        <th>Credits</th>
-                        <th>Semester</th>
+                        <th>Sección</th>
+                        <th>Vacantes</th>
+                        <th>Profesor</th>
+
+                        <th>Horas</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-for="todo in todos" :key="todo.id">
-                        <td>{{todo.code}}</td>
-                        <td>{{todo.name}}</td>
-                        <td>{{todo.credits}}</td>
-                        <td>{{todo.semester}}</td>
+                        <td>{{todo.sectionName}}</td>
+                        <td>{{todo.vacancy}}</td>
+                        <td>{{todo.professorName}}</td>
+                        <td>{{todo.numberOfHours}}</td>
                     </tr>
                     </tbody>
                 </table>
-                <!--v-data-table
-                        v-model="selected"
-                        :dark="true"
-                        :headers="headers"
-                        :items="courses"
-                        :single-select="singleSelect"
-                        item-key="section"
-                        show-select
-                        class="elevation-1"
-                >
-                    <template v-slot:top>
-                        <v-switch v-model="singleSelect" label="Single select" class="pa-3"></v-switch>
-                    </template>
-                </v-data-table-->
             </div>
             <router-link to="/StudentHome" style="text-decoration:none">
                 <v-btn class ="accept">Aceptar</v-btn>
@@ -122,7 +109,7 @@
         },
         methods:{
             getTodos(){
-                axios.get('https://speedplanner.azurewebsites.net/api/User/1/Course')
+                axios.get('https://speedplanner.azurewebsites.net/api/User/1/Course/1/Section')
                     .then(response => {
                         console.log(response)
                         this.todos = response.data
