@@ -105,16 +105,7 @@
              },
         },
     }
-
-
-
-
-
-
-
-
-
-
+    
 </script>
 
 <style scoped>
@@ -168,7 +159,7 @@
         border-color: #FFFFFF;
         background-color: #A43E38 !important;
         border-width: thick;
-        margin-left: 1315px;
+        margin-left: 45%;
     }
     .space1{
         background-color: #3055AB;
@@ -190,7 +181,7 @@
         color: #FFFFFF;
         text-align: right;
     }
-
     .container{
     }
+
 </style>

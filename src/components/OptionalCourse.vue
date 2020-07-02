@@ -14,7 +14,27 @@
                     <v-btn class ="button-filter" >Filtros</v-btn>
             </router-link>
             <div>
-                <v-data-table
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Credits</th>
+                        <th>Semester</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="todo in todos" :key="todo.id">
+                        <router-link to="/viewSectionOptional" >
+                            <td>{{todo.code}}</td>
+                        </router-link>
+                        <td>{{todo.name}}</td>
+                        <td>{{todo.credits}}</td>
+                        <td>{{todo.semester}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--v-data-table
                         v-model="selected"
                         :dark="true"
                         :headers="headers"
@@ -27,7 +47,7 @@
                     <template v-slot:top>
                         <v-switch v-model="singleSelect" label="Single select" class="pa-3"></v-switch>
                     </template>
-                </v-data-table>
+                </v-data-table-->
             </div>
             <router-link to="/StudentHome" style="text-decoration:none">
                 <v-btn class ="accept">Aceptar</v-btn>
@@ -52,10 +72,12 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
         name: "OptionalCourse",
         data () {
             return {
+                todos: null,
                 singleSelect: false,
                 selected: [],
                 headers: [
@@ -99,6 +121,19 @@
                 ],
             }
         },
+        mounted(){
+            this.getTodos();
+        },
+        methods:{
+            getTodos(){
+                axios.get('https://speedplanner.azurewebsites.net/api/User/1/Course')
+                    .then(response => {
+                        console.log(response)
+                        this.todos = response.data
+                    })
+                    .catch(e => console.log(e))
+            }
+        }
     }
 </script>
 
@@ -131,7 +166,6 @@
         background-color:  #23313F ;
         height: 500px;
     }
-
     .space8 {
         background-color: #9F3833;
         height: 110px;
@@ -193,5 +227,92 @@
         color: white;
         top: 90px;
         right: 5%;
+    }
+    table{
+        width: 100%;
+
+        border-collapse: collapse;
+        background-color: #00b0ff;
+        font-family: 'Khula', sans-serif;
+    }
+    th, td{
+        text-align: center;
+        border: 1px solid white;
+        width: 12.5%;
+        background-color: #2C4B87;
+        color: white;
+    }
+    @media screen and (max-width: 800px) {
+        .space1 h1{
+            font-size: 40px;
+        }
+        .schedules-available h1{
+            font-size: 30px;
+        }
+        .schedules-available{
+            background-color:  #23313F ;
+            height: 600px;
+        }
+        .accept{
+            float: right;
+            background-color: #4377f2 !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+        }
+
+        .cancel{
+            float: right;
+            background-color: #B8504F !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+            right: 5%;
+        }
+    }
+
+    @media screen and (max-width: 400px){
+        .space1 h1{
+            font-size: 40px;
+        }
+        .schedules-available h1{
+            font-size: 30px;
+        }
+        .schedules-available{
+            background-color:  #23313F ;
+            height: 600px;
+        }
+        .accept{
+            float: right;
+            background-color: #4377f2 !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+        }
+
+        .cancel{
+            float: right;
+            background-color: #B8504F !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+            right: 5%;
+        }
     }
 </style>

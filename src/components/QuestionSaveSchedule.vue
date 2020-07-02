@@ -97,4 +97,46 @@
         color: #B8504F;
         font-size: 28px;
     }
+    @media screen and (max-width: 800px) {
+        .dialog h1{
+            font-size: 20px;
+        }
+        .dialog h2{
+            font-size: 20px;
+        }
+        .accept{
+            float: right;
+            background-color: #4377f2 !important;
+            font-size:13px;
+            width:20%;
+            height: 20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 20px;
+            right: 5%;
+        }
+
+        .cancel{
+            float: right;
+            background-color: #B8504F !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 20px;
+            right: 55%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        dialog h1{
+            font-size: 20px;
+        }
+        .dialog h2{
+            font-size: 20px;
+        }
+    }
 </style>

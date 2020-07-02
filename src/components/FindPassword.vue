@@ -13,7 +13,7 @@
         <v-col class="blue"  cols="12" sm="12"></v-col>
         <v-card-text class = "white--text">
         <v-form v-model="isValid" class = "Inicio" >
-            <v-card-text class ="text" cols="12" sm="12">¿Olvidaste la contraseña? Tranquilo y recuerda</v-card-text>
+            <v-card-text class ="text">¿Olvidaste la contraseña? Tranquilo y recuerda</v-card-text>
             <p class = "correo">Correo</p>
             <v-text-field single-line rounded filled outlined color="white" dark
                           v-model="remember"
@@ -107,19 +107,27 @@
         opacity: 0.5;
     }
     .Accept{
+        float: right;
         width: 150px;
         height: 40px;
         font-size: 18px;
         color:white;
         font-family: 'Khula', sans-serif;
         font-style: normal;
-        border-radius: 20px;
-        border-style: solid;
         border-color: #FFFFFF;
         background-color: #3457A1;
-        border-width: thick;
-        margin-left: 656px;
-
+        top: -20px;
     }
 
+    @media screen and (max-width: 800px) {
+        .text{
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .text{
+            font-size: 25px;
+        }
+    }
 </style>

@@ -9,8 +9,7 @@
         </v-row>
 
         <v-card-text class ="schedules-available">
-            <h1>Secciones Disponibles</h1>
-            <v-btn class ="button-filter" >Filtros</v-btn>
+            <h1>Secciones Disponibles Cursos de Carrera</h1>
             <div>
                 <table id="courses-list">
                     <thead>
@@ -32,10 +31,10 @@
                     </tbody>
                 </table>
             </div>
-            <router-link to="/StudentHome" style="text-decoration:none">
+            <router-link to="/CareerCourse" style="text-decoration:none">
                 <v-btn class ="accept">Aceptar</v-btn>
             </router-link>
-            <router-link to="/StudentHome" style="text-decoration:none">
+            <router-link to="/CareerCourse" style="text-decoration:none">
                 <v-btn class ="cancel">Cancelar</v-btn>
             </router-link>
 
@@ -226,5 +225,71 @@
         width: 12.5%;
         background-color: #2C4B87;
         color: white;
+    }
+
+    @media screen and (max-width:800px) {
+        .space1 h1{
+            font-size: 40px;
+        }
+        .schedules-available h1{
+            font-size: 15px;
+        }
+        .accept{
+            float: right;
+            background-color: #4377f2 !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+        }
+
+        .cancel{
+            float: right;
+            background-color: #B8504F !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+            right: 5%;
+        }
+    }
+
+    @media screen and (max-width:400px) {
+        .space1 h1{
+            font-size: 40px;
+        }
+        .schedules-available h1{
+            font-size: 15px;
+        }
+        .accept{
+            float: right;
+            background-color: #4377f2 !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+        }
+
+        .cancel{
+            float: right;
+            background-color: #B8504F !important;
+            font-size:13px;
+            width:20%;
+            height:20%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+            right: 5%;
+        }
     }
 </style>

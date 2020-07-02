@@ -15,7 +15,7 @@
          <v-col class="space2">
             <h2 class="po">Docente: </h2>
          </v-col>
-         <v-col class="d-flex" cols="12" sm="6">
+         <v-col class="d-flex">
             <v-select
                     :items="List"
                     label="Ingrese el nombre del profesor"
@@ -34,10 +34,10 @@
       <v-row class="space4" justify="right">
          <v-col  class="btn-area" cols="12" sm="6" >
             <router-link to="/CareerCourse" style="text-decoration:none">
-               <v-btn outlined color="white" rounded x-large bottom width="280" class="btn">Cancelar</v-btn>
+               <v-btn outlined color="white" rounded x-large bottom width="280" class="cancel">Cancelar</v-btn>
             </router-link>
             <router-link to="/CareerCourse" style="text-decoration:none">
-               <v-btn outlined color="white" rounded x-large bottom width="280" class="btn1">Aceptar</v-btn>
+               <v-btn outlined color="white" rounded x-large bottom width="280" class="accept">Aceptar</v-btn>
             </router-link>
          </v-col>
       </v-row>
@@ -76,7 +76,7 @@
 </script>
 
 <style scoped>
-   .btn{
+   .cancel{
       float:right;
       font-size: 18px;
       color: white !important;
@@ -86,10 +86,10 @@
       border-style: solid;
       border-color: #FFFFFF;
       background-color: #A43E38;
-      margin-right: 10px;
+      margin-right: 1px;
       left: 600px;
    }
-   .btn1{
+   .accept{
       float: right;
       font-size: 18px;
       color: white !important;
@@ -191,6 +191,59 @@
    .space2 h2{
       padding-top: 10px;
       padding-left: 20px;
-      font-size: 30px;
+      font-size: 20px;
+   }
+
+   @media screen and (max-width: 800px) {
+      .space2 h2{
+         padding-top: 10px;
+         padding-left: 20px;
+         font-size: 17px !important;
+      }
+      .space3 h2{
+         font-size: 20px;
+         text-align: left !important;
+         padding-left: 10px;
+      }
+   }
+
+   @media screen and (max-width: 800px) {
+      .space2 h2{
+         padding-top: 10px;
+         padding-left: 20px;
+         font-size: 15px;
+      }
+      .space3 h2{
+         font-size: 20px;
+      }
+      .cancel{
+         float:right;
+         font-size: 10px !important;
+         color: white !important;
+         font-family: 'Khula', sans-serif;
+         font-style: normal;
+         border-radius: 10px;
+         border-style: solid;
+         border-color: #FFFFFF;
+         background-color: #A43E38;
+         width: 30px !important;
+         height: 30px !important;
+         margin-right: 1px;
+         left: -130px !important;
+      }
+      .accept{
+         float: right;
+         font-size: 10px !important;
+         color: white !important;
+         font-family: 'Khula', sans-serif;
+         font-style: normal;
+         border-radius: 10px;
+         border-style: solid;
+         border-color: #FFFFFF;
+         width: 30px !important;
+         height: 30px !important;
+         background-color: #4377F2;
+         left: 80px !important;
+      }
    }
 </style>

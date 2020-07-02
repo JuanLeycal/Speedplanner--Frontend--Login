@@ -2,57 +2,39 @@
     <v-card class="a">
         <v-row>
             <v-col class="space1" cols="12" sm="12">
-                <h1>Cursos de Carrera</h1>
+                <h1>Matemática Básica</h1>
             </v-col>
             <v-col class="space2" cols="12" sm="12"></v-col>
             <v-col class="space3" cols="12" sm="12"></v-col>
         </v-row>
 
         <v-card-text class ="schedules-available">
-            <h1>Cursos Disponibles</h1>
-            <router-link to="/FiltersCaree  rCourse">
-                <v-btn class ="button-filter" >Filtros</v-btn>
-            </router-link>
+            <h1>Secciones Disponibles Cursos Electivos</h1>
             <div>
-                <table>
+                <table id="courses-list">
                     <thead>
                     <tr>
-                        <th>Code</th>
-                        <th>Name</th>
-                        <th>Credits</th>
-                        <th>Semester</th>
+                        <th>Sección</th>
+                        <th>Vacantes</th>
+                        <th>Profesor</th>
+
+                        <th>Horas</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-for="todo in todos" :key="todo.id">
-                        <router-link to="/viewSection" >
-                        <td>{{todo.code}}</td>
-                        </router-link>
-                        <td>{{todo.name}}</td>
-                        <td>{{todo.credits}}</td>
-                        <td>{{todo.semester}}</td>
+                        <td>{{todo.sectionName}}</td>
+                        <td>{{todo.vacancy}}</td>
+                        <td>{{todo.professorName}}</td>
+                        <td>{{todo.numberOfHours}}</td>
                     </tr>
                     </tbody>
                 </table>
-                <!--v-data-table
-                        v-model="selected"
-                        :dark="true"
-                        :headers="headers"
-                        :items="courses"
-                        :single-select="singleSelect"
-                        item-key="section"
-                        show-select
-                        class="elevation-1"
-                >
-                    <template v-slot:top>
-                        <v-switch v-model="singleSelect" label="Single select" class="pa-3"></v-switch>
-                    </template>
-                </v-data-table-->
             </div>
-            <router-link to="/StudentHome" style="text-decoration:none">
+            <router-link to="/OptionalCourse" style="text-decoration:none">
                 <v-btn class ="accept">Aceptar</v-btn>
             </router-link>
-            <router-link to="/StudentHome" style="text-decoration:none">
+            <router-link to="/OptionalCourse" style="text-decoration:none">
                 <v-btn class ="cancel">Cancelar</v-btn>
             </router-link>
 
@@ -126,7 +108,7 @@
         },
         methods:{
             getTodos(){
-                axios.get('https://speedplanner.azurewebsites.net/api/User/1/Course')
+                axios.get('https://speedplanner.azurewebsites.net/api/User/1/Course/1/Section')
                     .then(response => {
                         console.log(response)
                         this.todos = response.data
@@ -244,17 +226,12 @@
         background-color: #2C4B87;
         color: white;
     }
-
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width:800px) {
         .space1 h1{
             font-size: 40px;
         }
         .schedules-available h1{
-            font-size: 30px;
-        }
-        .schedules-available{
-            background-color:  #23313F ;
-            height: 600px;
+            font-size: 15px;
         }
         .accept{
             float: right;
@@ -281,16 +258,13 @@
             right: 5%;
         }
     }
-    @media screen and (max-width: 400px){
+
+    @media screen and (max-width:400px) {
         .space1 h1{
             font-size: 40px;
         }
         .schedules-available h1{
-            font-size: 30px;
-        }
-        .schedules-available{
-            background-color:  #23313F ;
-            height: 600px;
+            font-size: 15px;
         }
         .accept{
             float: right;

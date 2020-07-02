@@ -76,4 +76,28 @@
         left: -200px;
         top: -50px;
     }
+    @media screen and (max-width: 800px) {
+        .space1 h1 {
+            font-size: 30px;
+        }
+        .dialog h1{
+            font-size: 20px;
+        }
+
+        .imag{
+            display: none !important;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .space1 h1 {
+            font-size: 30px;
+        }
+        .dialog h1{
+            font-size: 20px;
+        }
+
+        .imag{
+            display: none !important;
+        }
+    }
 </style>

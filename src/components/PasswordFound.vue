@@ -87,6 +87,7 @@
         background-color: #23313F;
         color: #FFFFFF !important;
         font-family: 'Khula', sans-serif;
+        height: 300px;
     }
     .imag{
         opacity: 0.5;
@@ -103,8 +104,8 @@
         border-color: #FFFFFF;
         background-color: #3457A1;
         border-width: thick;
-        margin-left: 280px;
-
+        float: right;
+        right: 400px;
     }
     .Log{
         width: 250px;
@@ -118,6 +119,78 @@
         border-color: #FFFFFF;
         background-color: #A33D37;
         border-width: thick;
-        margin-left: 400px;
+        float: right;
+        right: 1000px;
+    }
+
+    @media screen and (max-width: 800px) {
+        .text{
+            font-size: 20px;
+        }
+        .Accept{
+            width: 200px;
+            height: 60px;
+            font-size: 18px;
+            color:white;
+            font-family: 'Khula', sans-serif;
+            font-style: normal;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            background-color: #3457A1;
+            border-width: thick;
+            float: right;
+            right: 80px;
+        }
+        .Log{
+            width: 250px;
+            height: 60px;
+            font-size: 18px;
+            color:white;
+            font-family: 'Khula', sans-serif;
+            font-style: normal;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            background-color: #A33D37;
+            border-width: thick;
+            right: 60px;
+            top: 100px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .text{
+            font-size: 20px;
+        }
+        .Accept{
+            width: 200px;
+            height: 60px;
+            font-size: 18px;
+            color:white;
+            font-family: 'Khula', sans-serif;
+            font-style: normal;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            background-color: #3457A1;
+            border-width: thick;
+            float: right;
+            right: 80px;
+        }
+        .Log{
+            width: 250px;
+            height: 60px;
+            font-size: 18px;
+            color:white;
+            font-family: 'Khula', sans-serif;
+            font-style: normal;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #FFFFFF;
+            background-color: #A33D37;
+            border-width: thick;
+            right: 60px;
+            top: 100px;
+        }
     }
 </style>

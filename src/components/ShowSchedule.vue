@@ -4,7 +4,6 @@
         <v-col class="space2"  cols="12" sm="12"></v-col>
         <v-col class="back"></v-col>
         <v-row>
-
             <v-col class="dark">
                 <v-sheet height="400">
                     <v-calendar

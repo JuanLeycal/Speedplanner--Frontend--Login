@@ -151,4 +151,81 @@
     .img{
         padding-top: 65px;
     }
+
+    @media screen and (max-width: 800px){
+        .text{
+            font-size: 40px !important;
+        }
+        .btn-area h1{
+            font-size: 30px !important;
+        }
+
+        .btn-1{
+            float: right;
+            background-color: #B8504F!important;
+            font-size:13px;
+            width:40%;
+            height:30%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+            left: 10%;
+        }
+
+        .btn-2{
+            float: right;
+            background-color: #4377f2!important;
+            font-size:13px;
+            width:40%;
+            height:30%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 30px;
+            right: 30%;
+        }
+        .image{
+            width: 30%;
+            height: 30%;
+        }
+    }
+    @media screen and (max-width: 400px){
+        .text{
+            font-size: 40px !important;
+        }
+        .btn-area h1{
+            font-size: 30px !important;
+        }
+
+        .btn-1{
+            float: right;
+            background-color: #B8504F!important;
+            font-size:13px;
+            width:40%;
+            height:30%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 90px;
+            left: 10%;
+        }
+
+        .btn-2{
+            float: right;
+            background-color: #4377f2!important;
+            font-size:13px;
+            width:40%;
+            height:30%;
+            border-radius: 6px;
+            border: 2px solid white;
+            color: white;
+            top: 30px;
+            right: 30%;
+        }
+        .image{
+            width: 30%;
+            height: 30%;
+        }
+    }
 </style>
